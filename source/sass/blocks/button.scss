@@ -1,0 +1,33 @@
+.button {
+  display: inline-flex;
+  padding: 10px 16px;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+
+  cursor: pointer;
+  border-radius: 3px;
+
+  transition: opacity $trans-default;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    background-color: $color-black-pearl-button;
+    opacity: 0.5;
+  }
+}

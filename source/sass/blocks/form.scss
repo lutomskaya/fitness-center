@@ -1,0 +1,264 @@
+.form {
+  min-width: 49%;
+
+  @include vp-1023 {
+    min-width: 100%;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
+}
+
+.form h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 6px;
+
+    font-size: 30px;
+    line-height: 140%;
+  }
+}
+
+.form p {
+  margin: 0;
+  padding: 0;
+  margin-left: 7px;
+  margin-bottom: 33px;
+
+  font-weight: 400;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+    margin-left: 0;
+
+    font-size: 14px;
+    line-height: 134%;
+  }
+}
+
+.form form {
+  margin-left: 6px;
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.form input {
+  width: 100%;
+  min-height: 50px;
+  padding: 15px;
+
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: 1px solid transparent;
+
+  @include vp-767 {
+    margin-bottom: 18px;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-default-white;
+    outline: 1px solid $color-default-white;
+  }
+}
+
+.form textarea {
+  width: 100%;
+  min-height: 155px;
+  margin-top: 20px;
+  margin-bottom: 27px;
+  padding-top: 23px;
+  padding-left: 17px;
+
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: 1px solid transparent;
+
+  @include vp-1023 {
+    min-height: 155px;
+    margin-top: 18px;
+    margin-bottom: 28px;
+    padding-top: 30px;
+  }
+
+  @include vp-767 {
+    min-height: 180px;
+    margin-top: 3px;
+    margin-bottom: 23px;
+    padding-left: 14px;
+    padding-top: 20px;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-default-white;
+    outline: 1px solid $color-default-white;
+  }
+}
+
+.form__header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 31px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &--modal {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.form__footer label {
+  display: grid;
+  grid-template-columns: 15px auto;
+  gap: 11px;
+  align-self: flex-end;
+
+  width: 46%;
+  margin: 0;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-1023 {
+    width: 48%;
+    padding-top: 10px;
+    align-self: start;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-left: 5px;
+    padding-top: 5px;
+  }
+}
+
+.form__button {
+  justify-content: center;
+  align-items: center;
+
+  width: 46%;
+  padding: 14px 25px;
+
+  font-size: $fz-default;
+  font-weight: 700;
+  line-height: 19px;
+
+  background-color: $color-black-pearl-button;
+  color: $color-default-white;
+  border: none;
+
+  @include vp-1023 {
+    width: 40%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.form__mark {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.form input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+
+  &:checked + .form__mark {
+    background-image: url("../img/svg/mark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

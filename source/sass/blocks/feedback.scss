@@ -1,0 +1,46 @@
+.feedback {
+  position: relative;
+  background: linear-gradient(139deg, $color-cerulean 34%, $color-deep-sky-blue 34%);
+  color: $color-default-white;
+
+  @include vp-1023 {
+    background: $color-deep-sky-blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 510px;
+    height: 285px;
+    top: 246px;
+    right: 55.2%;
+
+    background-image: url("../img/paper_airplane.webp");
+    background-repeat: no-repeat;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-top: 165px;
+  padding-bottom: 248px;
+  padding-right: 25px;
+
+  @include vp-1023 {
+    justify-content: center;
+
+    padding-top: 45px;
+    padding-bottom: 123px;
+  }
+
+  @include vp-767 {
+    padding-top: 48px;
+    padding-bottom: 88px;
+  }
+}
