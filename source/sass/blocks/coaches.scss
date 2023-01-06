@@ -1,0 +1,188 @@
+.coaches__container {
+  padding-bottom: 45px;
+  position: relative;
+}
+
+.coaches__wrapper {
+  position: relative;
+}
+
+.coaches h2 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.coaches__wrapper .swiper-wrapper {
+  position: relative;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.coaches__item {
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 260/294;
+}
+
+.coaches__inner img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 260/294;
+
+  @include vp-1199 {
+    min-height: 294px;
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    min-height: 274px;
+    aspect-ratio: 226/274;
+  }
+}
+
+.coaches__inner h3 {
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.coaches__item:hover .h3,
+.coaches__item:focus .h3,
+.coaches__item:focus-visible .h3 {
+  display: none;
+}
+
+.coaches__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  background: rgba(16, 38, 84, 0.89);
+
+  @include vp-767 {
+    padding-bottom: 75px;
+  }
+}
+
+.coaches__item:hover .coaches__description,
+.coaches__item:focus .coaches__description,
+.coaches__item:focus-visible .coaches__description {
+  display: flex;
+  z-index: 2;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.coaches__inner {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.coaches__description h4 {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.coaches__description p {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #b6bdcc;
+  text-align: center;
+}
+
+.coaches__description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.coaches__description li {
+  position: relative;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-default-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+}
+
+.coaches__button {
+  padding: 5px;
+  position: absolute;
+  width: 46px;
+  height: 45px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  fill: none;
+  top: 315px;
+
+  &--prev {
+    left: 31px;
+  }
+
+  &--next {
+    right: 31px;
+  }
+}

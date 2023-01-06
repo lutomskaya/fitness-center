@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {checkInputPhone} from './modules/form';
 import {setupVideo} from './modules/video';
 import {toggleTabs} from './modules/tabs';
+import {coachesSlider, reviewsSlider} from './modules/slider';
 
 
 // ---------------------------------
@@ -20,6 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
   setupVideo();
   toggleTabs();
   checkInputPhone();
+  coachesSlider();
+  reviewsSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
