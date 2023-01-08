@@ -1,0 +1,21 @@
+.reviews__wrapper .swiper-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.reviews__container h2 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.reviews__container li {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 28px;
+  background-color: $color-resolution-blue;
+}

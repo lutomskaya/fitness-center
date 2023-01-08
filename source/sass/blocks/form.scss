@@ -2,3 +2,79 @@
   background-color: $color-default-black;
   color: $color-default-white;
 }
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 410px;
+  margin-right: 172px;
+  margin-left: auto;
+  margin-top: 55px;
+}
+
+.form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.form input {
+  width: 100%;
+  display: block;
+  padding: 4px 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $color-light-slate-grey;
+  outline: none;
+
+  &::placeholder {
+    opacity: 1;
+    color: $color-default-white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.form h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.form__button {
+  border: 3px solid $color-default-white;
+  background-color: transparent;
+  margin-top: 30px;
+  padding: 15px 20px;
+  color: $color-default-white;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
