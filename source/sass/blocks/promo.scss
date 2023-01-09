@@ -2,15 +2,27 @@
   display: grid;
   grid-template-columns: 43% 1fr;
   padding: 120px 105px 52px;
+
+  @include vp-1199 {
+    padding: 100px 45px 52px;
+  }
 }
 
 .promo__description {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(3, auto);
+  display: flex;
+  flex-direction: column;
   padding: 80px 75px;
   color: $color-default-white;
   background-color: $color-torch-red;
+
+  @include vp-1199 {
+    padding: 45px 45px;
+  }
+}
+
+.promo__info {
+  display: flex;
+  padding-bottom: 3px;
 }
 
 .promo__description h2 {
@@ -26,6 +38,8 @@
 
   @include vp-1199 {
     font-size: 48px;
+    max-width: 200px;
+    padding: 7px 0 0 7px;
   }
 }
 
@@ -48,10 +62,18 @@
 .promo__description dl {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+
+  @include vp-1199 {
+    padding-top: 2px;
+  }
 }
 
 .promo__description dt {
   display: block;
+  font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
@@ -64,9 +86,12 @@
 
 .promo__description dd {
   position: relative;
-  display: block;
+  display: flex;
   margin: 0;
   padding: 0;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 40px;
   line-height: 58px;
@@ -89,6 +114,19 @@
   @include vp-1199 {
     font-size: 24px;
     line-height: 36px;
+    margin-bottom: -4px;
+  }
+}
+
+.promo__data {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-top: 9px;
+
+  @include vp-1199 {
+    padding-left: 4px;
+    padding-top: 2px;
   }
 }
 
@@ -97,11 +135,17 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+
+  @include vp-1199 {
+    font-size: 10px;
+  }
 }
 
 .promo__button {
   grid-row: 3/4;
   grid-column: 1/-1;
+  margin-top: 45px;
+  padding: 25px 20px;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -110,4 +154,12 @@
   color: $color-default-white;
   border: 4px solid $color-default-white;
   background-color: transparent;
+
+  @include vp-1199 {
+    padding: 12px;
+    margin-top: 32px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 2px solid $color-default-white;
+  }
 }

@@ -1,4 +1,9 @@
+.reviews__container {
+  padding-bottom: 97px;
+}
+
 .reviews__wrapper .swiper-wrapper {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -15,7 +20,29 @@
 
 .reviews__container li {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   column-gap: 28px;
   background-color: $color-resolution-blue;
+}
+
+.reviews__wrapper h3 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-default-white;
+}
+
+.reviews__wrapper p {
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-default-white;
+}
+
+.reviews__image {
+  grid-column: 1/2;
+  grid-row: 1/-1;
 }

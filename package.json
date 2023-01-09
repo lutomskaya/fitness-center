@@ -62,6 +62,6 @@
   },
   "dependencies": {
     "node": "16.15",
-    "swiper": "^8.4.5"
+    "swiper": "^7.4.1"
   }
 }

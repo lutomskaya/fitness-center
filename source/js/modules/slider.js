@@ -16,8 +16,8 @@ const coachesSlider = () => {
       autoHeight: true,
 
       navigation: {
-        nextEl: '[data-swiper-button="prev"]',
-        prevEl: '[data-swiper-button="next"]',
+        nextEl: '[data-swiper-button="coaches-prev"]',
+        prevEl: '[data-swiper-button="coaches-next"]',
       },
 
       breakpoints: {
