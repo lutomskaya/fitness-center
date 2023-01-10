@@ -16,8 +16,8 @@ const coachesSlider = () => {
       autoHeight: true,
 
       navigation: {
-        nextEl: '[data-swiper-button="coaches-prev"]',
-        prevEl: '[data-swiper-button="coaches-next"]',
+        nextEl: '[data-swiper-button="coaches-next"]',
+        prevEl: '[data-swiper-button="coaches-prev"]',
       },
 
       breakpoints: {
@@ -53,8 +53,8 @@ const reviewsSlider = () => {
       autoHeight: true,
 
       navigation: {
-        nextEl: '[data-swiper-button="reviews-prev"]',
-        prevEl: '[data-swiper-button="reviews-next"]',
+        nextEl: '[data-swiper-button="reviews-next"]',
+        prevEl: '[data-swiper-button="reviews-prev"]',
       },
     });
     swiper.init();

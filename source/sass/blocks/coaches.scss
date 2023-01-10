@@ -1,9 +1,13 @@
 .coaches__container {
-  padding: 12px 105px 102px;
+  padding: 57px 105px 93px;
   position: relative;
 
   @include vp-1199 {
-    padding-bottom: 269px;
+    padding: 48px 100px 102px;
+  }
+
+  @include vp-767 {
+    padding: 12px 47px 74px;
   }
 }
 
@@ -12,17 +16,23 @@
 }
 
 .coaches h2 {
+  margin: 0;
+  margin-bottom: 46px;
+  padding: 0;
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
+    margin-bottom: 30px;
+    text-align: center;
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
+    margin-bottom: 42px;
     font-size: 32px;
     line-height: 38px;
   }
@@ -39,12 +49,30 @@
   position: relative;
   cursor: pointer;
   aspect-ratio: 260/294;
+
+  @include vp-1199 {
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226/274;
+  }
 }
 
 .coaches__item img {
+  background-color: $color-quartz;
   display: block;
+  width: 100%;
   object-fit: cover;
   aspect-ratio: 260/294;
+
+  @include vp-1199 {
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226/274;
+  }
 }
 
 .coaches__item h3 {
@@ -73,7 +101,8 @@
   right: 0;
   display: none;
   flex-direction: column;
-  overflow-y: auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
   width: 100%;
   height: 100%;
   padding-left: 25px;
@@ -82,7 +111,7 @@
   background: rgba(16, 38, 84, 0.89);
 
   @include vp-767 {
-    padding-bottom: 75px;
+    padding-top: 41px;
   }
 }
 
@@ -101,6 +130,12 @@
   z-index: -2;
 }
 
+.coaches__item:hover img,
+.coaches__item:focus img,
+.coaches__item:focus-visible img {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 .coaches__description h4 {
   margin: 0;
   padding: 0;
@@ -115,6 +150,7 @@
 
 .coaches__description p {
   margin: 0;
+  margin-bottom: 32px;
   padding: 0;
 
   font-family: $ff-roboto-condensed;
@@ -133,6 +169,11 @@
 
   display: flex;
   flex-direction: column;
+  gap: 13px;
+
+  @include vp-767 {
+    padding-left: 25px;
+  }
 }
 
 .coaches__description li {
@@ -172,5 +213,37 @@
 
   &--next {
     right: 31px;
+  }
+
+  @include vp-1199 {
+    top: 255px;
+  }
+
+  @include vp-767 {
+    top: 208px;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.coaches__button svg {
+  @include vp-767 {
+    width: 20px;
+    height: 24px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.3);
   }
 }

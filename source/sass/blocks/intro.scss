@@ -35,7 +35,7 @@
   }
 }
 
-.intro__description h1 {
+.intro__description h2 {
   margin: 0;
   margin-bottom: 7px;
   padding: 0;
@@ -80,6 +80,7 @@
 
   @include vp-767 {
     padding: 0;
+    padding-right: 28px;
   }
 }
 
@@ -127,20 +128,29 @@
 }
 
 .intro__image img {
+  background-color: $color-quartz;
+  aspect-ratio: 660/401;
+
   @include vp-1199 {
     width: 100%;
+    height: auto;
+    aspect-ratio: 678/345;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320/313;
   }
 }
 
 .intro__video img {
   aspect-ratio: 364/228;
-  background-color: $color-deep-sky-blue;
+  background-color: $color-quartz;
 
   @include vp-1199 {
     aspect-ratio: 266/167;
   }
 
-  @include vp-1199 {
+  @include vp-767 {
     aspect-ratio: 320/167;
   }
 }
@@ -154,6 +164,7 @@
 
 .intro__video-button {
   display: none;
+  cursor: pointer;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -169,5 +180,15 @@
   @include vp-1199 {
     width: 73px;
     height: 73px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    width: 110px;
+    height: 110px;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

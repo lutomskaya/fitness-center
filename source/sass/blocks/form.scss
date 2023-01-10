@@ -1,6 +1,15 @@
 .form {
   background-color: $color-default-black;
   color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 62px 162px 69px 132px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 64px 15px 68px;
+  }
 }
 
 .form form {
@@ -10,6 +19,12 @@
   margin-right: 172px;
   margin-left: auto;
   margin-top: 55px;
+
+  @include vp-1199 {
+    width: 100%;
+    margin: 0;
+    max-width: initial;
+  }
 }
 
 .form ul {
@@ -19,6 +34,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+
+  @include vp-1199 {
+    gap: 60px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
 }
 
 .form input {
@@ -30,6 +54,7 @@
   font-size: 14px;
   line-height: 16px;
   background-color: transparent;
+  color: $color-default-white;
   border: 1px solid transparent;
   border-bottom: 1px solid $color-light-slate-grey;
   outline: none;
@@ -40,6 +65,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid $color-default-white;
+    outline: none;
   }
 }
 
@@ -56,12 +87,14 @@
     font-weight: 700;
     font-size: 42px;
     line-height: 50px;
+    margin-bottom: 35px;
   }
 
   @include vp-767 {
     font-weight: 600;
     font-size: 32px;
     line-height: 38px;
+    margin-bottom: 37px;
   }
 }
 
@@ -77,4 +110,19 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+    color: $color-default-black;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include vp-767 {
+    margin-top: 40px;
+  }
 }

@@ -6,6 +6,24 @@
   @include vp-1199 {
     padding: 100px 45px 52px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding: 70px 15px 52px;
+  }
+}
+
+.promo__wrapper img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 660/500;
+  background-color: $color-default-black;
+
+  @include vp-767 {
+    width: 100%;
+    aspect-ratio: 290/292;
+  }
 }
 
 .promo__description {
@@ -17,6 +35,10 @@
 
   @include vp-1199 {
     padding: 45px 45px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 49px;
   }
 }
 
@@ -142,16 +164,20 @@
 }
 
 .promo__button {
+  display: block;
+  text-align: center;
   grid-row: 3/4;
   grid-column: 1/-1;
   margin-top: 45px;
   padding: 25px 20px;
+  font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-default-white;
+  cursor: pointer;
   border: 4px solid $color-default-white;
   background-color: transparent;
 
@@ -161,5 +187,16 @@
     font-size: 10px;
     line-height: 12px;
     border: 2px solid $color-default-white;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+    color: $color-default-black;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

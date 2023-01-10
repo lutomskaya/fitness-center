@@ -1,9 +1,9 @@
 .subscriptions {
+  position: relative;
   background-color: #f8f9fc;
 }
 
 .subscriptions__wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +89,19 @@
 
   @include vp-767 {
     font-size: 16px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    opacity: 1;
+    outline: 2px solid $color-crimson;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -193,6 +206,13 @@
   color: $color-chambray;
 }
 
+.subscriptions__item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .subscriptions__price-shadow {
   margin: 0;
   padding: 0;
@@ -202,7 +222,6 @@
   font-size: 100px;
   line-height: 150%;
   color: $color-whisper;
-  z-index: 1;
   opacity: 0.48;
 
   @include vp-767 {
@@ -242,7 +261,9 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
+  text-align: center;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   border: 2px solid $color-default-black;
   background-color: transparent;
 
@@ -253,6 +274,10 @@
   @include vp-767 {
     width: 75%;
     margin-top: 30px;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

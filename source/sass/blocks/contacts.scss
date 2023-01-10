@@ -2,6 +2,14 @@
   border-top: 1px solid $color-light-slate-grey;
   padding-top: 60px;
   padding-bottom: 62px;
+
+  @include vp-1199 {
+    padding: 62px 133px;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 60px;
+  }
 }
 
 .contacts h2 {
@@ -16,11 +24,14 @@
   margin-bottom: 36px;
 
   @include vp-1199 {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
+    margin-bottom: 35px;
     font-size: 32px;
     line-height: 38px;
   }
@@ -49,6 +60,26 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @include vp-1199 {
+    margin: 0;
+    grid-template-columns: 44% 1fr;
+    column-gap: 93px;
+    row-gap: 18px;
+
+    &::before {
+      left: 53%;
+    }
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .contacts h3 {
@@ -58,6 +89,35 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
+
+  @include vp-1199 {
+    margin-bottom: 7px;
+    font-size: 20px;
+  }
+}
+
+.contacts__item--address {
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.contacts__item--schedule {
+  @include vp-767 {
+    order: 2;
+  }
+}
+
+.contacts__item--phone {
+  @include vp-767 {
+    order: 3;
+  }
+}
+
+.contacts__item--email {
+  @include vp-767 {
+    order: 4;
+  }
 }
 
 .contacts a,
@@ -68,4 +128,33 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 152.34%;
+  }
+}
+
+.contacts a {
+  position: relative;
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-crimson;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-crimson;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

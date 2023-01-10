@@ -12,15 +12,15 @@
 .info__inner {
   display: grid;
   grid-template-columns: 132px auto;
-  margin-bottom: 65px;
+  margin-bottom: 45px;
 
   @include vp-1199 {
     grid-template-columns: 113px auto;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 22px;
   }
 }
 
@@ -114,36 +114,46 @@
 }
 
 .info__button {
-  margin-left: 167px;
+  display: block;
+  width: 59%;
+  margin-left: 163px;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
-  padding: 20px 55px;
+  padding: 20px 50px;
+  text-align: center;
   text-transform: uppercase;
   background-color: transparent;
   color: $color-default-white;
-  outline: 4px solid $color-default-white;
-
-  &:hover {
-    background-color: $color-default-white;
-    color: $color-default-black;
-    border: none;
-  }
+  border: 4px solid $color-default-white;
 
   @include vp-1199 {
-    margin-left: 145px;
+    margin-left: 135px;
     padding: 20px 30px;
   }
 
   @include vp-767 {
+    width: 100%;
     margin-left: 0;
-    padding: 20px 86px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+    color: $color-default-black;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
 .info__image-wrapper {
+  max-width: 500px;
+
   @include vp-1199 {
     max-width: 324px;
     height: auto;
@@ -151,6 +161,8 @@
 }
 
 .info__image {
+  background-color: $color-cerulean;
+
   @include vp-1199 {
     aspect-ratio: 324/390;
     object-fit: cover;

@@ -1,9 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {checkInputPhone} from './modules/form';
 import {setupVideo} from './modules/video';
 import {toggleTabs} from './modules/tabs';
 import {coachesSlider, reviewsSlider} from './modules/slider';
+import {checkInputName, checkInputPhone} from './modules/form';
+import {initScroll} from './modules/scroll';
 
 
 // ---------------------------------
@@ -20,9 +21,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setupVideo();
   toggleTabs();
-  checkInputPhone();
   coachesSlider();
   reviewsSlider();
+  checkInputName();
+  checkInputPhone();
+  initScroll();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
