@@ -1,6 +1,6 @@
 .subscriptions {
   position: relative;
-  background-color: #f8f9fc;
+  background-color: $color-chost-white;
 }
 
 .subscriptions__wrapper {
@@ -21,6 +21,7 @@
 .subscriptions h2 {
   margin: 0;
   padding: 0;
+
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
@@ -29,6 +30,7 @@
   @include vp-1199 {
     padding-right: 13px;
     padding-bottom: 8px;
+
     font-size: 42px;
     line-height: 50px;
   }
@@ -74,6 +76,7 @@
   position: relative;
   display: block;
   padding: 12px 5px 13px;
+
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 20px;
@@ -148,6 +151,7 @@
 .subscriptions__item {
   position: relative;
   padding: 58px 0;
+
   text-align: center;
   background-color: $color-default-white;
   overflow: hidden;
@@ -185,6 +189,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
+
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 26px;
@@ -199,6 +204,7 @@
 .subscriptions__text {
   margin: 0;
   padding: 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 16px;
@@ -217,6 +223,7 @@
   margin: 0;
   padding: 0;
   padding-top: 10px;
+
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 100px;
@@ -233,6 +240,7 @@
   padding: 0;
   margin: 0;
   margin-top: -95px;
+
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 60px;
@@ -257,13 +265,8 @@
   padding: 24px 43px;
   width: 60%;
   margin-top: 34px;
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+
+  color: $color-default-black;
   border: 2px solid $color-default-black;
   background-color: transparent;
 
@@ -274,10 +277,6 @@
   @include vp-767 {
     width: 75%;
     margin-top: 30px;
-  }
-
-  &:active {
-    opacity: 0.5;
   }
 }
 

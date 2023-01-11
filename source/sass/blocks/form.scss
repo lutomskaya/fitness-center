@@ -49,6 +49,7 @@
   width: 100%;
   display: block;
   padding: 4px 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 14px;
@@ -78,48 +79,43 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
   font-weight: 800;
   font-size: 54px;
   line-height: 156%;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
+    margin-bottom: 35px;
+
     font-weight: 700;
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 35px;
   }
 
   @include vp-767 {
+    margin-bottom: 37px;
+
     font-weight: 600;
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 37px;
   }
 }
 
 .form__button {
-  border: 3px solid $color-default-white;
-  background-color: transparent;
   margin-top: 30px;
   padding: 15px 20px;
-  color: $color-default-white;
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
+
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+
+  border: 3px solid $color-default-white;
 
   &:hover,
   &:focus-visible {
     background-color: $color-default-white;
     color: $color-default-black;
     outline: none;
-  }
-
-  &:active {
-    opacity: 0.5;
   }
 
   @include vp-767 {

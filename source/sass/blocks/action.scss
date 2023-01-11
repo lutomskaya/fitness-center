@@ -12,26 +12,29 @@
 
 .action__wrapper h2 {
   margin: 0;
+  margin-bottom: 32px;
   padding: 0;
+
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 32px;
 
   @include vp-1199 {
-    font-size: 42px;
-    line-height: 50px;
     margin-bottom: 40px;
     margin-left: -10px;
+
+    font-size: 42px;
+    line-height: 50px;
   }
 
   @include vp-767 {
-    font-size: 32px;
-    line-height: 38px;
     margin-left: -6px;
     margin-bottom: 41px;
+
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
@@ -55,6 +58,7 @@
 .action__item {
   display: flex;
   flex-direction: column;
+  padding: 20px 28px;
   border: 7px solid transparent;
   border-image-source: linear-gradient(
       148.82deg,
@@ -62,7 +66,6 @@
       #00359f 100%
     );
   border-image-slice: 1;
-  padding: 20px 28px;
 
   @include vp-1199 {
     flex: 0 0 48%;
@@ -75,18 +78,19 @@
     flex: 0 0 100%;
     align-items: center;
     padding-top: 30px;
-    padding-bottom: 32px;
+    padding-bottom: 27px;
   }
 }
 
 .action__item h3 {
   margin: 0;
+  margin-bottom: 2px;
   padding: 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 26px;
   line-height: 150%;
-  margin-bottom: 2px;
 
   @include vp-1199 {
     margin-bottom: 4px;
@@ -96,6 +100,7 @@
 .action__item p {
   margin: 0;
   padding: 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 16px;
@@ -107,27 +112,21 @@
 }
 
 .action__button {
-  display: flex;
   align-items: center;
   position: relative;
-  width: 14%;
+  width: 16%;
   margin-top: auto;
   padding-left: 0;
   padding-bottom: 8px;
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #1c3374;
+
+  color: $color-resolution-blue;
 
   &::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 1px;
-    background-color: #1c3374;
+    background-color: $color-resolution-blue;
     bottom: 7px;
     left: 0;
   }
@@ -137,16 +136,12 @@
   }
 
   @include vp-767 {
-    width: 31%;
+    width: 34%;
   }
 
   &:hover,
   &:focus-visible {
     transform: scale(1.3);
-  }
-
-  &:active {
-    opacity: 0.5;
   }
 }
 
@@ -207,6 +202,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  border: none;
 
   &::after {
     background-color: $color-default-white;
@@ -240,6 +236,6 @@
   color: $color-default-white;
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }

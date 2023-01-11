@@ -3,6 +3,7 @@
   grid-template-columns: 35% 1fr;
   gap: 5%;
   padding: 120px 103px 6px 163px;
+
   background-color: $color-default-white;
   color: $color-default-black;
 
@@ -48,12 +49,14 @@
   @include vp-1199 {
     padding-right: 15px;
     margin-bottom: 0;
+
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
     margin-bottom: 5px;
+
     font-size: 32px;
     line-height: 38px;
   }
@@ -86,11 +89,13 @@
 
 .intro__description span {
   display: block;
+  margin-bottom: 38px;
+
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin-bottom: 38px;
+
 
   @include vp-1199 {
     margin-bottom: 33px;

@@ -1,16 +1,16 @@
 .featuries {
-  background-color: #f8f9fc;
+  background-color: $color-chost-white;
 }
 
 .featuries__wrapper {
-  padding: 148px 160px 33px;
+  padding: 148px 160px 53px;
 
   @include vp-1199 {
-    padding: 90px 15px 20px;
+    padding: 90px 15px 95px;
   }
 
   @include vp-767 {
-    padding: 60px 0;
+    padding: 60px 0 62px;
   }
 }
 
@@ -19,6 +19,7 @@
   margin-bottom: 38px;
   padding: 0;
   padding-left: 10px;
+
   text-align: center;
   font-weight: 600;
   font-size: 54px;
@@ -26,10 +27,11 @@
   letter-spacing: 0.03em;
 
   @include vp-1199 {
-    font-size: 42px;
-    line-height: 50px;
     padding-right: 30px;
     margin-bottom: 40px;
+
+    font-size: 42px;
+    line-height: 50px;
   }
 
   @include vp-767 {
@@ -44,7 +46,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 23% 1fr;
-  column-gap: 60px;
+  column-gap: 59px;
   row-gap: 115px;
   position: relative;
 
@@ -57,7 +59,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 32px;
   }
 }
 
@@ -75,9 +77,9 @@
 
   @include vp-767 {
     max-width: 100%;
-    padding: 0 46px;
     grid-template-columns: 1fr;
     gap: 0;
+    padding: 0 47px;
   }
 }
 
@@ -104,6 +106,7 @@
 
   @include vp-767 {
     grid-column: 1 / -1;
+    padding-left: 47px;
   }
 }
 
@@ -116,13 +119,13 @@
   }
 
   @include vp-767 {
-    padding-left: 46px;
     grid-column: 1 / -1;
+    padding-left: 46px;
   }
 }
 
 .featuries__item:last-child {
-  margin: 15px 0 58px;
+  margin: 15px 0 38px;
   padding: 53px 30px 29px;
   display: block;
   text-align: center;
@@ -136,23 +139,27 @@
     width: 60%;
     grid-row: 2 / 3;
     grid-column: 1 / -1;
-    margin: 6px auto -7px;
+    margin: 0 auto;
   }
 
   @include vp-767 {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
     width: 100%;
-    padding: 19px 60px 44px;
-    margin: 20px 0 6px;
+    padding: 38px 60px 44px;
+    margin: 11px 0 6px;
   }
 }
 
 .featuries__count {
   min-width: 72px;
 
-  @include vp-767 {
+  @include vp-1199 {
     min-width: 58px;
+  }
+
+  @include vp-767 {
+    text-align: center;
   }
 }
 
@@ -173,16 +180,18 @@
 .featuries__count p {
   margin: 0;
   padding: 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  color: #2e35ac;
+  color: $color-persian-blue;
 }
 
 .featuries__description h3 {
   margin: 13px 0px 10px;
   padding: 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 22px;
@@ -195,7 +204,7 @@
   }
 
   @include vp-767 {
-    margin-top: 7px;
+    margin-top: 10px;
     text-align: center;
   }
 }
@@ -203,6 +212,7 @@
 .featuries__description p {
   margin: 0;
   padding: 0;
+
   font-family: $ff-roboto-condensed;
   font-weight: 300;
   font-size: 16px;
@@ -241,8 +251,8 @@
   }
 
   @include vp-767 {
-    margin-top: -18px;
-    margin-bottom: 33px;
+    margin-top: -6px;
+    margin-bottom: 11px;
   }
 }
 
