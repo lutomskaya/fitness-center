@@ -1728,6 +1728,10 @@ button,
   letter-spacing: 0.03em;
 }
 
+.intro__text {
+  margin-right: 20px;
+}
+
 .intro p {
   display: block;
   margin: 0;
@@ -2482,7 +2486,7 @@ button,
 }
 
 .featuries__description h3 {
-  margin: 13px 0px 10px;
+  margin: 13px 0 10px;
   padding: 0;
   font-family: "Roboto-condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -2585,11 +2589,15 @@ button,
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: 16%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: auto;
   padding-left: 0;
+  padding-right: 0;
   padding-bottom: 8px;
   color: #1c3374;
+  border: none;
 }
 
 .action__button::after {
@@ -2767,6 +2775,11 @@ button,
   opacity: 0.5;
 }
 
+.reviews-button.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .reviews-button svg:hover,
 .reviews-button svg:focus-visible {
   -webkit-transform: scale(1.3);
@@ -2832,14 +2845,23 @@ button,
   line-height: 150%;
 }
 
+.contacts__item--phone {
+  max-width: 102px;
+}
+
 .contacts a,
 .contacts p {
   margin: 0;
   padding: 0;
+  max-width: 170px;
   font-family: "Roboto-condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 21.33px;
+}
+
+.contacts__item--phone a {
+  font-size: 13px;
 }
 
 .contacts a {
@@ -3234,6 +3256,10 @@ button,
     line-height: 50px;
   }
 
+  .intro__text {
+    margin-right: 0;
+  }
+
   .intro p {
     padding: 0 75px;
   }
@@ -3481,8 +3507,7 @@ button,
     -webkit-box-flex: 0;
     -ms-flex: 0 0 48%;
     flex: 0 0 48%;
-    padding-top: 17px;
-    padding-bottom: 22px;
+    padding: 17px 28px 22px;
     min-height: 211px;
   }
 
@@ -3490,16 +3515,15 @@ button,
     margin-bottom: 4px;
   }
 
-  .action__button {
-    width: 27%;
-  }
-
   .action__item--promo {
     -ms-grid-columns: 41.2% 1fr;
     grid-template-columns: 41.2% 1fr;
     grid-column: 1/-1;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+  }
+
+  .action__content {
+    padding-top: 32px;
   }
 
   .action__item--promo img {
@@ -3547,7 +3571,7 @@ button,
 
   .contacts h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     font-size: 42px;
     line-height: 50px;
   }
@@ -3571,10 +3595,19 @@ button,
     font-size: 20px;
   }
 
+  .contacts__item--phone {
+    max-width: 120px;
+  }
+
   .contacts a,
   .contacts p {
     font-size: 18px;
     line-height: 152.34%;
+    max-width: 220px;
+  }
+
+  .contacts__item--phone a {
+    font-size: 16px;
   }
 
   .feedback {
@@ -3922,15 +3955,11 @@ button,
     -ms-flex-align: center;
     align-items: center;
     padding-top: 30px;
-    padding-bottom: 27px;
+    padding-bottom: 31px;
   }
 
   .action__item p {
     text-align: center;
-  }
-
-  .action__button {
-    width: 34%;
   }
 
   .action__item--promo {

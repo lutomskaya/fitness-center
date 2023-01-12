@@ -162,6 +162,11 @@
   }
 }
 
+.reviews-button.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .reviews-button svg {
   @include vp-767 {
     width: 20px;
